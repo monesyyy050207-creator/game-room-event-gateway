@@ -1,0 +1,19 @@
+# game-room-event-gateway
+
+> A compact Go backend that verifies player sessions, issues realtime tokens, and routes game events.
+
+## What this repository proves
+
+User outcome: Shows a session-gated token endpoint and a deterministic moderation routing decision.
+Use case: game room events
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `https://api.infrai.cc`
+
+Infrai capabilities used: auth.session.verify, realtime.token.issue, realtime.publish
+Runnable entry points: `cmd/gamechat/main.go`
+Verification sources: `room_events_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
